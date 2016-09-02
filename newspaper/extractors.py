@@ -247,6 +247,9 @@ class ContentExtractor(object):
 
         # title elem found
         title_text = self.parser.getText(title_element[0])
+        if title_text:
+            return title_text
+        # the following rest is totally unneccessary!
         used_delimeter = False
 
         # title from h1
